@@ -32,7 +32,8 @@ const login = async function (req, res, next) {
             expiresIn: 30 
         });
     } else {
-        res.send('Username or password incorrect');
+        res.status(401);
+        res.send(401, 'Username or password incorrect');
     }
 
 }
